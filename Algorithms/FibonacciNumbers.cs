@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 
 namespace Algorithms
 {
@@ -13,13 +11,13 @@ namespace Algorithms
         /// </summary>
         /// <param name="numberOfElements">Number of elements to be found</param>
         /// <returns>IEnumberable object of fibonacci numbers</returns>
-        public static IEnumerable<int> FiboGenerate(int numberOfElements)
+        public static IEnumerable<BigInteger> FiboGenerate(int numberOfElements)
         {
             if(numberOfElements<=0) throw new ArgumentOutOfRangeException($"{nameof(numberOfElements)} must be a positive number");
 
-            int firstNum = 1;
-            int secondNum = 1;
-            int sum;
+            BigInteger firstNum = 1;
+            BigInteger secondNum = 1;
+            BigInteger sum;
             int currentIndex = 0;
 
             yield return firstNum;
